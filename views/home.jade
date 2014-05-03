@@ -1,0 +1,61 @@
+extends layout
+
+block content
+  div.col-md-offset-2.container
+    
+    h3 亲爱的HINOCer，
+     
+    h4 请把你们本周的工作情况告诉我吧！
+
+    div.row
+      div.col-md-10
+        hr
+
+    div.row
+      div.col-md-2
+        h4 年级
+        select.form-control(id='grade')
+          option 研二 2012级
+          option 研一 2013级
+          option 大四 2014级
+
+      div.col-md-2
+        h4 姓名
+        select.form-control(id='name')
+          option 狄Dog
+          option 才Dog
+          option 雪Dog
+
+      div.col-md-2
+        h4 汇报时间
+        select.form-control(id='time')
+          option 第一周
+          option 第二周
+          option 第三周
+          option 第四周
+          option 第五周
+
+    div.row
+      div.col-md-10
+        hr
+
+    div.row    
+      div.col-md-5
+        h4 工作任务
+        textarea.form-control(id='task',rows='5', placeholder='这周你都干了什么？')
+        hr
+      div.col-md-5
+        h4 完成情况
+        textarea.form-control(id='complete',rows='5', placeholder='完成的怎么样了？')
+        hr
+      div.col-md-5
+        h4 存在问题说明
+        textarea.form-control(id='issue',rows='5', placeholder='遇到了什么问题？')
+        hr
+      div.col-md-5
+        h4 总体进展情况
+        textarea.form-control(id='all',rows='5', placeholder='总体进展情况如何？')
+        hr
+      
+      div.col-md-offset-4.col-md-2
+        button.btn.btn-primary.btn-lg.btn-block(id='submit', type='button') 提交汇报
