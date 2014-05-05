@@ -3,3 +3,4 @@
 node_modules
 active.sh
 *.xlsx
+db
