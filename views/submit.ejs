@@ -1,6 +1,83 @@
 ﻿<% include layout.ejs %>
-<div class="container">
-
-    <p>上传已成功</p>
-
+<div class="banner">
+        <div class="banner-inner">
+            <h3>亲爱的HINOCer，</h3>
+            <p>请把你们本周的工作情况告诉我吧！</p>
+        </div>
 </div>
+<div class="container ">
+  <div class="section">
+  <form method="post" action="/submit" >
+	  <div class="row">
+		<div class="col-md-4">
+		  <h4>年级</h4>
+		  <select name="grade" class="form-control">
+		  	<option>2013级</option>
+		  </select>
+		</div>
+		<div class="col-md-4">
+		  <h4>姓名</h4>
+		  <select name="name" class="form-control">
+			<option>陈添财</option>
+			<option>姜逸坤</option>
+			<option>李雪寒</option>
+			<option>鲍凯狄</option>
+			<option>金淼</option>
+			<option>陈君</option>
+			<option>肖婷</option>
+			<option>张静媛</option>
+		  </select>
+		</div>
+		<div class="col-md-4">
+		  <h4>汇报时间</h4>
+		  <select name="time" class="form-control">
+			<option value="140414-140420">140414-140420</option>
+            <option value="140421-140428">140421-140428</option>
+            <option value="140414-140420">140429-140504</option>
+            <option value="140405-140511">140405-140511</option>
+		  </select>
+		</div>
+	  </div>
+	  <div class="row">
+		<div class="col-md-12">
+		  <hr/>
+		</div>
+	  </div>
+	  <div class="row">   
+		<div class="col-md-6">
+		  <h4>工作任务</h4>
+		  <textarea name="task" rows="5" placeholder="这周你都干了什么？" class="form-control"></textarea>
+		  <hr/>
+		</div>
+		<div class="col-md-6">
+		  <h4>完成情况</h4>
+		  <textarea name="complete" rows="5" placeholder="完成的怎么样了？" class="form-control"></textarea>
+		  <hr/>
+		</div>
+		<div class="col-md-6">
+		  <h4>存在问题说明</h4>
+		  <textarea name="issue" rows="5" placeholder="遇到了什么问题？" class="form-control"></textarea>
+		  <hr/>
+		</div>
+		<div class="col-md-6">
+		  <h4>总体进展情况</h4>
+		  <textarea name="progress" rows="5" placeholder="总体进展情况如何？" class="form-control"></textarea>
+		  <hr/>
+		</div>
+		<div class="col-md-6">
+		  <h4>下次计划</h4>
+		  <textarea name="plan" rows="5" placeholder="下次计划？" class="form-control"></textarea>
+		  <hr/>
+		</div>
+		
+	  </div>
+	  <div class="row">   
+	  <div class="col-md-offset-5 col-md-2">
+		  <button type="submit" class="btn btn-primary btn-lg btn-block">提交汇报</button>
+	  </div>
+	  </div>
+  </form>
+  </div>
+</div>
+
+<% include inc/footer.ejs %>

@@ -37,7 +37,9 @@ app.configure('production', function(){
 app.get('/', routes.index);
 app.get('/home', routes.home);
 app.get('/about', routes.about);
-app.post('/submit', routes.submit);
+app.get('/report', routes.report);
+app.get('/submit', routes.getsubmit);
+app.post('/submit', routes.postsubmit);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));

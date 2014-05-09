@@ -1,0 +1,80 @@
+﻿<% include layout.ejs %>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('#reportTable').dataTable({
+        "lengthMenu": [[-1, 20, 25, 50], ["All", 20, 25, 50, ]]
+    });
+});
+</script>
+<div class="banner">
+        <div class="banner-inner">
+            <h3>Report</h3>
+            <div class="col-md-4">
+            <p>时间</p>
+            <select class="form-control input-sm">
+            
+            <option>140414-140420</option>
+            <option>140421-140428</option>
+            <option>140429-140504</option>
+            <option>140405-140511</option>
+            </select>
+            </div>
+            <div class="col-md-4">
+            <p>年级</p>
+            <select class="form-control input-sm">
+            <option>2012级</option>
+            <option>2013级</option>
+            </select>
+            </div>
+            <div class="col-md-4">
+            <p>姓名</p>
+            <select class="form-control input-sm">
+                  <option>陈添财</option>
+                  <option>姜逸坤</option>
+                  <option>李雪寒</option>
+                  <option>鲍凯狄</option>
+                  <option>金淼</option>
+                  <option>陈君</option>
+                  <option>肖婷</option>
+                  <option>张静媛</option>
+            </select>
+            </div>
+        </div>
+</div>
+<div class="container-fluid">
+<div class="col-md-12">
+<div class="section">
+	<table id="reportTable"class="table table-striped table-hover" >
+	<thead>
+          <tr>
+            <th>姓名</th>
+            <th>年级</th>
+            <th>时间段</th>
+            <th>工作任务</th>
+            <th>完成情况</th>
+            <th>存在问题</th>
+            <th>总体进展</th>
+            <th>下次计划</th>
+          </tr>
+    </thead>
+  <tbody>
+  <% allreport.forEach(function(allreport){ %>
+    <tr>
+    <td width="60"><%= allreport.name%></td>
+    <td width="60"><%= allreport.grade%></td>
+    <td width="60"><%= allreport.time%></td>
+    <td width="200"><li><%- allreport.report.task.replace(/\r\n/g,'<li>')%></td>
+    <td width="200"><li><%- allreport.report.complete.replace(/\r\n/g,'<li>')%></td>
+    <td width="200"><li><%- allreport.report.issue.replace(/\r\n/g,'<li>')%></td>
+    <td width="80"><%= allreport.report.progress%></td>
+    <td width="200"><li><%- allreport.report.plan.replace(/\r\n/g,'<li>')%></td>
+    <%date = allreport.report.submittime;simpletime = date.getFullYear()+"-"+(date.getMonth() + 1)+"-"+date.getDate()+" "+date.getHours()+":"+(date.getMinutes() <10 ? '0'+date.getMinutes():date.getMinutes())+":"+(date.getSeconds() < 10?'0'+date.getSeconds():date.getSeconds());%>
+
+	</tr>
+  <% }) %>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+<% include inc/footer.ejs %>

@@ -1,0 +1,241 @@
+a {
+    color: #64A0DE;
+    word-wrap: break-word;
+    -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+    transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+a:hover,
+a:focus {
+    color: #7b7b7b;
+    text-decoration: none;
+    outline: 0;
+}
+a:before,
+a:after {
+    -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+    transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+
+.navbar-inverse {
+	background: #393939;
+}
+
+.navbar-inverse .navbar-nav > .active > a {
+	color: #fff;
+	background: #555;
+	box-shadow: none
+}
+
+.navbar-inverse .navbar-brand {
+	color: #999999;
+	font-weight: bolder;
+	font-size: 22px;
+	letter-spacing: 1px;
+}
+
+.navbar-inverse .navbar-brand i {
+	color: #64A0DE;
+	font-size: 22px;
+	letter-spacing: 1px;
+}
+
+.headerwrap {
+	text-align: center;
+	background: url(/img/header-bg.jpg) no-repeat center top;
+	margin-top: -30px;
+	padding-top:20px;
+	text-align:center;
+	background-attachment: relative;
+	background-position: center center;
+	min-height: 350px;
+	width: 100%;
+	
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.headerwrap h1 {
+	text-align: center;
+	font-family: Microsoft YaHei;
+	color: white;
+	font-size: 30px;
+	font-weight: 960;
+	letter-spacing: 2px;
+	margin-top: 5px;
+}
+
+.headerwrap h2 {
+	text-align: center;
+	font-family: Microsoft YaHei;
+	color: white;
+	font-size: 20px;
+	font-weight: 960;
+	letter-spacing: 2px;
+}
+
+.section {
+  overflow: auto;
+  border: 1px solid #c5c1b4;
+  -webkit-border-radius: 4px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 4px;
+  -moz-background-clip: padding;
+  border-radius: 4px;
+  background-clip: padding-box;
+  background-color: #fbfbfb;
+  -webkit-box-shadow:0 0 20px rgba(50,50,50,.1);
+  -moz-box-shadow:0 0 20px rgba(50,50,50,.1);
+  box-shadow: 0 2px 20px rgba(50,50,50,.3), inset 0 -1px 2px rgba(0,0,0,.05);
+  padding: 20px 10px 10px 10px;
+  margin-bottom: 30px;
+  min-height:470px
+}
+
+.section .row {
+	margin-right: 0;
+	margin-left: 0;
+}
+
+body {
+	font-family: "Helvetica Neue",Helvetica,"Hiragino Sans GB","Segoe UI","Microsoft Yahei",Tahoma,Arial,STHeiti,sans-serif;
+	
+}
+
+footer {
+  background: #2D2D2D;
+  color: #ccc;
+}
+footer hr {
+	border-top:3px solid #3C3A3C;
+}
+
+.divider-vertical{
+	border-style:solid;
+	border-width:1px;
+	opacity:.5;
+	height:50px;
+	border-left-color:#111415;
+	border-right-color:#646668
+}
+
+.navbar-nav.navbar-right:last-child {
+	margin-right: 15px;
+}
+
+.row-item {
+	display:block;
+	text-align: center;
+	box-shadow: inset 0 0 20px rgba(185,185,185,0.5);
+	padding-bottom: 30px;
+	min-height: 400px;
+}
+.row-item img {
+	height: 100px;
+}
+
+.row-item .col-lg-4 img {
+	width: 100px;
+	height: 100px;
+	border-radius: 10px;
+}
+.row-item .col-lg-4 h4{
+	color: #333;
+	font-size: 20px;
+	font-weight: normal;
+	margin-top: 20px;
+}
+
+.index-title {
+	text-align: center;
+	margin: 0 auto;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	font-weight: bolder;
+}
+
+.row-item2 {
+	text-align: center;
+	box-shadow: inset 0 0 20px rgba(185,185,185,0.5);
+	background: #FFF url("/img/pat.png");
+	min-height: 400px;
+}
+
+.row-item2 .col-lg-4 img {
+	width: 100px;
+	height: 100px;
+	border-radius: 10px;
+}
+
+.row-item2 .col-lg-4 h4{
+	color: #333;
+	font-size: 20px;
+	font-weight: normal;
+	margin-top: 20px;
+}
+
+.banner {
+	background: #c6c3be url("/img/banner.png") center center no-repeat;
+	min-height: 160px;
+	margin-top: -30px;
+
+}
+.banner .banner-inner {
+	text-align: center;
+	width: 980px;
+	height: 160px;
+	margin: 0 auto;
+}
+
+.banner h3 {
+	padding-top: 30px;
+	font-size: 30px;
+	color: #FFF;
+}
+
+.banner p {
+	font-size: 20px;
+	color: #FFF;
+}
+
+.modal-dialog {
+    margin-top: 15%;
+}
+
+.modal-footer {
+	text-align: center;
+}
+
+.hinoc-logo img{
+	height: 200px;
+}
+
+.report-page .sidebar {
+	min-height: 20px;
+	margin-bottom: 20px;
+	background-color: #f5f5f5;
+	border: 1px solid #e3e3e3;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+}
+
+.report-page .col-md-2 {
+	padding: 0;
+}
+
+.report-page .col-md-10 {
+	padding: 0;
+}

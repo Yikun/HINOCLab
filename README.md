@@ -39,6 +39,3 @@ node install -g express-generator
 ├─test			里面有个excel的demo,node test.js 可以生成b.xlsx
 └─views			一些view文件，用jade模板写
     └─inc
-
-
-	http://html2jade.org/

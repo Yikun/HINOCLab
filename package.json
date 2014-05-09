@@ -4,9 +4,8 @@
     "private": true,
     "dependencies": {
         "express": "3.2.4",
-        "jade": "0.30.0",
+        "ejs": "1.0.0",
 		"node-xlsx": "0.4.0",
-		"mongodb" : "1.4.3",
-		"mongoose" : "3.8.8"
+		"mongodb" : "1.4.3"
     }
 }
