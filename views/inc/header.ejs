@@ -56,13 +56,12 @@
 
             <ul class="nav navbar-nav navbar-right ng-scope" ng-controller="user_ctrl" id="header_me">
                 <li class="divider-vertical"></li>
-                
-                <li>
-                    <a href="/signin" data-toggle="modal" data-target="#Signin" >登录</a>
-                </li>
-                <li>
-                    <a href="/signup" data-toggle="modal" data-target="#Signup">注册</a>
-                </li>
+                <% if (!user) { %>
+                <li><a href="/signin" data-toggle="modal" data-target="#Signin" >登录</a></li>
+                <% } else { %>
+                  <li><a href="/signin" data-toggle="modal" data-target="#Modify"><%= user.name%></a></li>
+                  <li><a href="/logout">退出</a></li>
+                <% } %>
                 
             </ul>
         </div>
@@ -73,20 +72,32 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-          <h4 class="modal-title" id="myModalLabel">登陆</h4>
+          <h4 class="modal-title" id="myModalLabel">亲，请登陆一下，初始密码是hinoc</h4>
         </div>
-        <form method="post" action="/signin" >
+        <form method="post" action="/login" >
           <div class="modal-body">
           <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-4">
             <h4>年级</h4>
             <select name="grade" class="form-control">
+              <option>2012级</option>
               <option>2013级</option>
             </select>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
               <h4>姓名</h4>
               <select name="name" class="form-control">
+              <option>班晋</option>
+              <option>孙文</option>
+              <option>陈中强</option>
+              <option>陈露露</option>
+              <option>王凤林</option>
+              <option>王丽如</option>
+              <option>彭露</option>
+              <option>吴效颖</option>
+              <option>周元海</option>
+              <option>张宇</option>  
+              <option>郭乐</option>
               <option>陈添财</option>
               <option>姜逸坤</option>
               <option>李雪寒</option>
@@ -97,7 +108,7 @@
               <option>张静媛</option>
               </select>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
               <h4>密码</h4>
               <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
             </div>
@@ -110,34 +121,27 @@
       </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
-
-<div class="modal fade" id="Signup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<% if (user) { %>
+<div class="modal fade" id="Modify" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-          <h4 class="modal-title" id="myModalLabel">登陆</h4>
+          <h4 class="modal-title" id="myModalLabel">修改密码</h4>
         </div>
-        <form method="post" action="/signin" >
+        <form method="post" action="/modify" >
           <div class="modal-body">
           <div class="row">
             <div class="col-md-4">
             <h4>年级</h4>
             <select name="grade" class="form-control">
-              <option>2013级</option>
+              <option><%=user.grade%></option>
             </select>
             </div>
             <div class="col-md-4">
               <h4>姓名</h4>
               <select name="name" class="form-control">
-              <option>陈添财</option>
-              <option>姜逸坤</option>
-              <option>李雪寒</option>
-              <option>鲍凯狄</option>
-              <option>金淼</option>
-              <option>陈君</option>
-              <option>肖婷</option>
-              <option>张静媛</option>
+              <option><%=user.name%></option>
               </select>
             </div>
             <div class="col-md-4">
@@ -147,11 +151,11 @@
           </div>
         </div>
         <div class="modal-footer">
-          <button type="submit" class="btn btn-primary">确认登陆</button>
+          <button type="submit" class="btn btn-primary">确认修改</button>
         </div>
       </form>
       </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
-
+<% } %>
 </head>

@@ -71,10 +71,13 @@ a:after {
 	text-align: center;
 	font-family: Microsoft YaHei;
 	color: white;
-	font-size: 30px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	font-size: 35px;
 	font-weight: 960;
 	letter-spacing: 2px;
 	margin-top: 5px;
+	font-weight: bold;
 }
 
 .headerwrap h2 {
@@ -101,7 +104,7 @@ a:after {
   box-shadow: 0 2px 20px rgba(50,50,50,.3), inset 0 -1px 2px rgba(0,0,0,.05);
   padding: 20px 10px 10px 10px;
   margin-bottom: 30px;
-  min-height:470px
+  min-height:870px
 }
 
 .section .row {
@@ -111,7 +114,7 @@ a:after {
 
 body {
 	font-family: "Helvetica Neue",Helvetica,"Hiragino Sans GB","Segoe UI","Microsoft Yahei",Tahoma,Arial,STHeiti,sans-serif;
-	
+	height:100%;
 }
 
 footer {
@@ -140,7 +143,6 @@ footer hr {
 	text-align: center;
 	box-shadow: inset 0 0 20px rgba(185,185,185,0.5);
 	padding-bottom: 30px;
-	min-height: 400px;
 }
 .row-item img {
 	height: 100px;
@@ -170,6 +172,7 @@ footer hr {
 	text-align: center;
 	box-shadow: inset 0 0 20px rgba(185,185,185,0.5);
 	background: #FFF url("/img/pat.png");
+	height: 100%;
 	min-height: 400px;
 }
 
@@ -187,14 +190,26 @@ footer hr {
 }
 
 .banner {
-	background: #c6c3be url("/img/banner.png") center center no-repeat;
-	min-height: 160px;
-	margin-top: -30px;
 
+	background: url(/img/banner.png) no-repeat center top;
+	margin-top: -30px;
+	padding-top:20px;
+	text-align:center;
+	background-attachment: relative;
+	background-position: center center;
+	width: 100%;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 .banner .banner-inner {
 	text-align: center;
-	width: 980px;
 	height: 160px;
 	margin: 0 auto;
 }
@@ -219,23 +234,63 @@ footer hr {
 }
 
 .hinoc-logo img{
-	height: 200px;
+	margin-top: 30px;
+	height: 100px;
 }
 
-.report-page .sidebar {
-	min-height: 20px;
-	margin-bottom: 20px;
-	background-color: #f5f5f5;
-	border: 1px solid #e3e3e3;
-	border-radius: 4px;
-	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
-	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+.aboutwrap {
+	text-align: center;
+	background: url(/img/header-bg2.jpg) no-repeat center top;
+	margin-top: -30px;
+	padding-top:20px;
+	text-align:center;
+	background-attachment: relative;
+	background-position: center center;
+	min-height: 350px;
+	width: 100%;
+	
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
-.report-page .col-md-2 {
-	padding: 0;
+.aboutwrap h1 {
+	text-align: center;
+	font-family: Microsoft YaHei;
+	color: white;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	font-size: 35px;
+	font-weight: 960;
+	letter-spacing: 2px;
+	margin-top: 5px;
+	font-weight: bold;
 }
 
-.report-page .col-md-10 {
-	padding: 0;
+.aboutwrap h2 {
+	text-align: center;
+	font-family: Microsoft YaHei;
+	color: white;
+	font-size: 20px;
+	font-weight: 960;
+	letter-spacing: 2px;
+}
+
+.btn-play {
+position: absolute;
+top: 42%;
+left: 50%;
+width: 91px;
+height: 89px;
+margin: -45px 0 0 -45px;
+background-image: url(/img/home-img-sprite-d2a8e85a251fe8dd8c901705baad1287.png);
+background-repeat: no-repeat;
+background-size: 800px auto;
+background-position: -200px 0px;
 }
