@@ -38,7 +38,7 @@
     <td width="200"><li><%- allreport.report.task.replace(/\r\n/g,'<li>')%></td>
     <td width="200"><li><%- allreport.report.complete.replace(/\r\n/g,'<li>')%></td>
     <td width="200"><li><%- allreport.report.issue.replace(/\r\n/g,'<li>')%></td>
-    <td width="80"><%= allreport.report.progress%></td>
+    <td width="80"><li><%- allreport.report.progress.replace(/\r\n/g,'<li>')%></td>
     <td width="200"><li><%- allreport.report.plan.replace(/\r\n/g,'<li>')%></td>
     <%date = allreport.report.submittime;simpletime = date.getFullYear()+"-"+(date.getMonth() + 1)+"-"+date.getDate()+" "+date.getHours()+":"+(date.getMinutes() <10 ? '0'+date.getMinutes():date.getMinutes())+":"+(date.getSeconds() < 10?'0'+date.getSeconds():date.getSeconds());%>
 

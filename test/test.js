@@ -8,7 +8,7 @@ var buffer = xlsx.build({worksheets: [
   {"name":"第一周", "data":[
     ["A1", "B1"],
     [
-      {"value":"A2","formatCode":"General"},
+      {"value":"中文","formatCode":"General"},
       {"value":"B2","formatCode":"General"}
     ]
   ]},
