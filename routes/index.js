@@ -14,7 +14,18 @@ exports.index = function(req, res){
 }
 
 exports.home = function(req, res){
-  res.render('home', { title: 'Home', id: 'home', brand: brand , user: req.session.user})
+  if (req.session.user) {
+    Report.get(req.session.user.name, function(err, reports) {
+      if (err) {
+        //req.flash('error', err);
+        return res.redirect('/');
+      }
+      console.log(reports);
+      res.render('home', { title: 'Home', id: 'home', brand: brand, allreport: reports, user: req.session.user})
+    })
+  } else {
+    res.render('home', { title: 'Home', id: 'home', brand: brand, user: req.session.user})
+  }
 };
 
 exports.about = function(req, res){

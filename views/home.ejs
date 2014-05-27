@@ -1,5 +1,7 @@
 ﻿<% include layout.ejs %>
-
-<% include inc/introduce.ejs %>
-
+	<% if (user) { %>
+		<% include userhome.ejs %>
+	<% } else{ %>
+		<% include inc/introduce.ejs %>
+	<% } %>
 <% include inc/footer.ejs %>
