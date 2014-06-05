@@ -350,7 +350,7 @@ background-position: -200px 0px;
   padding-top:    10px;
   padding-bottom: 10px;
   text-shadow: 0 1px 0 #fff;
-  background-color: #f7f5fa;
+  background-color: #f5f5f9;
   border-radius: 5px;
 }
 
@@ -370,9 +370,9 @@ background-position: -200px 0px;
 .bs-sidebar .nav > .active:hover > a,
 .bs-sidebar .nav > .active:focus > a {
   font-weight: bold;
-  color: #563d7c;
+  color: #428bca;
   background-color: transparent;
-  border-right: 1px solid #563d7c;
+  border-right: 1px solid #428bca;
 }
 
 /* Nav: second level (shown on .active) */

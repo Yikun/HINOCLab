@@ -9,6 +9,8 @@ var brand = 'HINOC Lab';
 var Report = require('../model/report.js');
 var User = require('../model/user.js');
 
+var settings = require('../settings');
+
 exports.index = function(req, res){
   res.redirect('/home');
 }
@@ -21,7 +23,7 @@ exports.home = function(req, res){
         return res.redirect('/');
       }
       console.log(reports);
-      res.render('home', { title: 'Home', id: 'home', brand: brand, allreport: reports, user: req.session.user})
+      res.render('home', { title: 'Home', id: 'home', brand: brand, timelist: settings.timelist, currettime: settings.currenttime, allreport: reports, user: req.session.user})
     })
   } else {
     res.render('home', { title: 'Home', id: 'home', brand: brand, user: req.session.user})
