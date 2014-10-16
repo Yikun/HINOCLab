@@ -1,36 +1,50 @@
-1.Windows下安装nodejs,应该会自动配置环境变量
+这是一个简单的周报系统使用NodeJS(后端)、MongoDB(数据库)、前端(Bootstrap)，支持EJS、Markdown模板。
+
+![preview](https://raw.githubusercontent.com/Yikun/HINOCLab/master/public/img/preview.png)
+
+#### 1.安装
+
+- Windows下安装nodejs,应该会自动配置环境变量
 没有的话，在path里面加
 
 	;C:\Program Files\nodejs\
 
+- Linux下安装nodejs, 
+
+	wget http://nodejs.org/dist/v0.10.32/node-v0.10.32-linux-x86.tar.gz
+	tar -zxvf node-v0.10.32-linux-x86.tar.gz
+	export PATH=XXX/node-v0.10.32-linux-x86/bin:$PATH
+	
 这个时候，试下命令`node -v`应该就能输出版本号了
 
 当然，你也可以使用`where node`看一看它在那个目录。
 
-2.设置node全局库的目录的环境变量
+#### 2.安装工具
 
-就是你使用`node install -g`安装的库
+就是你使用`npm install -gd`安装的库
 这里说2个比较有用的库
 
-	node install -g surpervisor
-	node install -g express-generator
+	npm install supervisor -gd
+	npm install express-generator -gd
 
-3.如果想要下载库的速度更快，可以更新下库的源
+Tips: 如果想要下载库的速度更快，可以更新下库的源
 
-	npm config set registry http://registry.cnpmjs.org
+	npm config set registry https://registry.npm.taobao.org
 	
-4.安装项目的库
+#### 3.安装依赖库
 
 	cd E:\yikun\labs\HINOCLab
 	npm install
 
-5.node app.js
+#### 4.启动程序
 
-为了修改方便，可以用不用重启当即生效
+	node app.js
+
+Tips: 为了修改方便，可以用不用重启当即生效
 
 	supervisor app.js
 	
-下次，运行的时候，只需要执行第五步就可以了
+下次，运行的时候，只需要执行第五步就可以了。
 
 ========================================================
 下面可以看看
@@ -48,4 +62,4 @@
 	└─views			一些view文件，用jade模板写
 		└─inc
 		
-![preview](https://raw.githubusercontent.com/Yikun/HINOCLab/master/public/img/preview.png)
+
