@@ -4,16 +4,15 @@
 
 #### 1.安装
 
-- Windows下安装nodejs,应该会自动配置环境变量
-没有的话，在path里面加
+- Windows下安装nodejs(应该会自动配置环境变量没有的话，在path里面加)
 
-	;C:\Program Files\nodejs\
+		;C:\Program Files\nodejs\
 
-- Linux下安装nodejs, 
+- Linux下安装nodejs
 
-	wget http://nodejs.org/dist/v0.10.32/node-v0.10.32-linux-x86.tar.gz
-	tar -zxvf node-v0.10.32-linux-x86.tar.gz
-	export PATH=XXX/node-v0.10.32-linux-x86/bin:$PATH
+		wget http://nodejs.org/dist/v0.10.32/node-v0.10.32-linux-x86.tar.gz
+		tar -zxvf node-v0.10.32-linux-x86.tar.gz
+		export PATH=XXX/node-v0.10.32-linux-x86/bin:$PATH
 	
 这个时候，试下命令`node -v`应该就能输出版本号了
 
