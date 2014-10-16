@@ -1,0 +1,18 @@
+﻿<% include layout.ejs %>
+<link rel="stylesheet" href="/css/github.css"/>
+<div class="banner">
+        <div class="banner-inner">
+            <h3><%-doctitle %></h3>
+            <p><%-docauthor %></p>
+        </div>
+</div>
+<div class="container">
+<div class="col-md-12">
+<div class="section">
+<div class="doc">
+	<%- content %>
+</div>
+</div>
+</div>
+</div>
+<% include inc/footer.ejs %>
